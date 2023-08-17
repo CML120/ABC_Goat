@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { useMutation } from "@apollo/client";
 import { ADD_CONTACT } from "../utils/mutations";
+// import alphabet from "../assets/alphabet.png";
 
 export default function Contact() {
   // handle ADD_CONTACT mutation

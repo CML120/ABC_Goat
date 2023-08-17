@@ -1,6 +1,6 @@
 //Import dependencies
 import React, { useState, useEffect } from 'react';
-
+import { AppContext, useAppContext } from "../context/AppContext";
 import { useQuery, useMu } from '@apollo/client';
 import { FETCH_WORDS_BY_DIFFICULTY, UPDATE_PLAYER_LEVEL } from '../utils/queries';
 //Importing sounds
@@ -15,10 +15,13 @@ import './SpellingGame.css';
 
 const SpellingGame = () => {
   // State variables 
+  const { user, updateUserLevel  } = useAppContext(); // Get the userInfo from AppContext
+  // console.log(user);
   const [spokenWord, setSpokenWord] = useState(''); // the letter(s) or word spoken by the player
   const [correctWord, setCorrectWord] = useState('');  //the selected word from the array
   const [correctWordsCount, setCorrectWordsCount] = useState(1); // keeps count of how many words have been spelled correctly
-  const [currentLevel, setCurrentLevel] = useState(1); //keeps track of the current player level difficulty
+  const [currentLevel, setCurrentLevel] = useState(parseInt(user.level)); //keeps track of the current player level difficulty
+  // const [currentLevel, setCurrentLevel] = useState(1); 
   const [typedWord, setTypedWord] = useState(''); //the word typed by the player
   const [isNewWordNeeded, setIsNewWordNeeded] = useState(true); //keeps track of whether a new word needs to be generated
   const [message, setMessage] = useState(''); //the message to be displayed to the player in the message div on the page
@@ -160,6 +163,13 @@ const SpellingGame = () => {
     if (correctWordsCount + 1 === 5) { // If the player has spelled 5 correct words
       setCurrentLevel((prevLevel) => prevLevel + 1); // Increment the current level
       setCorrectWordsCount(0); // Reset the correct word count to 0
+
+      if (currentLevel > user.level){
+        updateUserLevel(currentLevel + 1);
+        
+        console.log("Current Level:" + currentLevel);
+        console.log("Current Level:" + user.level);
+      }
     }
 
     // Play the "correct" audio

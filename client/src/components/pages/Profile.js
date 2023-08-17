@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME } from "../../utils/queries";
 import { DELETE_USER } from "../../utils/mutations";
+import { AppContext, useAppContext } from "../../context/AppContext";
 import "./Profile.css";
 
 import {
@@ -23,6 +24,15 @@ const Profile = () => {
   // Retrieve user info from localStorage
   const userInfo = data?.me || {};
 
+  //if the user info is changed, updates the user info
+  const { setUser } = useAppContext(); // Get the setUser function from AppContext
+  useEffect(() => {
+    // console.log("Updated User Info:", userInfo);
+    if (userInfo) {
+      setUser(userInfo);
+    }
+  }, [userInfo]); // This will trigger whenever 'userInfo' changes
+
   const handleDeleteUser = async (userId) => {
     // const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -40,6 +50,14 @@ const Profile = () => {
     } catch (error) {
       console.error(error);
     }
+
+    // Update the user info in AppContext
+    setUser({
+      username: "", // Set this value based on your requirement
+      level: ""     // Set this value based on your requirement
+    });
+
+    console.log("Updated User Info:", userInfo);
   };
 
   if (loading) {
@@ -68,7 +86,9 @@ const Profile = () => {
                   <p id="profile-p">Welcome {userInfo?.username}!</p>
                 )}
                 {/* <p id='profile-p'>Email: {userInfo?.email}</p> */}
-                <p id="profile-p">Level: {userInfo?.level}</p>
+                <p id="profile-p">
+                  Level: {userInfo?.level >= 5 ? 'G.R.O.A.T.' : userInfo?.level}
+                </p>
                 <Button
                   size="lg"
                   borderRadius="lg"

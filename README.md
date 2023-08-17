@@ -36,11 +36,18 @@ Clone the repo.
 
 ## Usage
 
-Open the application in your preferred browser by clicking on the provided link below. Begin your journey on the Play Ground page, and then explore the Practice Letter and Spelling Game pages. To access the last two pages, sign up for an account. Your spelling game's different levels will be available on the Profile page. If needed, you can delete your user account any time.
+The web app will be available at http://localhost:3000/ when ran locally.  
+Ensure you are in the root directory while using the terminal.   
+Run "npm run develop" in the terminal to start the server and client.  
+
+Open the application in your browser (Chrome or MS Edge is recommended) by clicking on the provided link below.  
+Begin your journey on the Play Ground page, and then explore the Practice Letter and Spelling Game pages.   
+To access the last two pages, sign up for an account. Your spelling game's different levels will be displayed on the Profile page.   
+If needed, you can delete your user account any time on the profile page.
 
 ![Deployed Link:](https://abc-goat-ddaec4f82441.herokuapp.com/)
 
-The web app will be available at http://localhost:3000/ when ran locally otherwise. Ensure you are in the root directory while using terminal. Run "npm run develop" in the terminal to start the server and client.
+
 
 ## Contribution
 
@@ -83,7 +90,10 @@ With the help and guidance of the staff of the UofM coding boot camp, as well as
 Nate Trask - https://github.com/N8Trask  
 Jenna Strom - https://github.com/JennaStrom  
 Nafbek Kebede - https://github.com/Nafbek  
-Chee Lor - https://github.com/CML120
+Chee Lor - https://github.com/CML120  
+
+[Test repo where work was done](https://github.com/CML120/The_GOATs_test_repo)  
+
 
 ![Alt text](image.png)
 
