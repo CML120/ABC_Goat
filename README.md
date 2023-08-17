@@ -12,9 +12,11 @@
 
   ## Project Description
 
-ABC GOAT is a learning app that teaches kids to read while playing games and having fun!   
+[ABC GOAT](https://abc-goat-ddaec4f82441.herokuapp.com/) is a learning app that teaches kids to read while playing games and having fun!   
 The game offers a play ground where the user can play a word guessing game, or just say words and see pictures associated with the word pop up!  
-The Practice Letters page allows the user to learn the alphabet through various activities, such as hearing each letter, learning each letter's sound, and then practicing them.  There is also a Spelling Game that the user can play.
+The Practice Letters page allows the user to learn the alphabet through various activities, such as hearing each letter, learning each letter's sound, and then practicing them.  There is also a Spelling Game that the user can play.  
+
+Deployed link: https://abc-goat-ddaec4f82441.herokuapp.com/  
 
   
 
