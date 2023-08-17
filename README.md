@@ -85,7 +85,9 @@ With the help and guidance of the staff of the UofM coding boot camp, as well as
 Nate Trask  - https://github.com/N8Trask  
 Jenna Strom - https://github.com/JennaStrom  
 Nafbek Kebede -  https://github.com/Nafbek  
-Chee Lor - https://github.com/CML120
+Chee Lor - https://github.com/CML120  
+
+[Test repo where work was done](https://github.com/CML120/The_GOATs_test_repo)  
 
 ![Alt text](image.png)  
 
