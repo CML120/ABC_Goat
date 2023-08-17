@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, Tooltip, Avatar } from "@chakra-ui/react";
-
+import { AppContext, useAppContext } from "../context/AppContext";
 import Auth from '../utils/auth'; // Make sure this path is correct
 import goatAvatar from "../assets/goat.jpg";
+import groatAvatar from "../assets/goatAvatar.jpg";
 
 const style = {
   logoImage: {
@@ -13,6 +14,7 @@ const style = {
 };
 
 function Navbar() {
+  const { user } = useAppContext();
   const [userAvatar, setUserAvatar] = useState(null);
   const isLoggedIn = Auth.loggedIn();
 
@@ -77,7 +79,12 @@ function Navbar() {
               {userAvatar ? (
                 <Avatar src={userAvatar} alt="User Avatar" className="avatar-image" />
               ) : (
-                <Avatar src={goatAvatar} alt="Goat Avatar" className="avatar-image" />
+                <Avatar
+                  src={user.level >= 5 ? groatAvatar : goatAvatar}
+                  alt="Avatar"
+                  className="avatar-image"
+                  style={{ border: user.level > 5 ? '3px solid gold' : 'none' }} // Add this line
+                />
               )}
             </Link>
           )}

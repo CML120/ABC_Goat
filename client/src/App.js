@@ -7,6 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { AppProvider } from "./context/AppContext";
 import "./App.css";
 import SpellingGame from "./components/SpellingGame";
 import PracticeLetter from "./components/practiceLetter";
@@ -26,9 +27,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
   const token = localStorage.getItem("id_token");
-  // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
@@ -45,21 +44,16 @@ const client = new ApolloClient({
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <div>
-          <Navbar />
-
-          <div className="mainContainer">
-            <div>
-              <GameScreen />
-            </div>
-            <Box
-              p={1}
-              width="100%"
-              mx={{ base: 0, md: 4 }}
-              pr={{ base: 0, md: 0 }}
-            >
-              <Routes>
+      <AppProvider> {/* Wrap your app with the AppProvider */}
+        <Router>
+          <div>
+            <Navbar />
+            <div className="mainContainer">
+              <div>
+                <GameScreen />
+              </div>
+              <Box p={1} width="100%" mx={{ base: 0, md: 4 }} pr={{ base: 0, md: 0 }}>
+                <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/login" element={<Login />} />
@@ -68,13 +62,13 @@ export default function App() {
                 <Route path="/spellinggame" element={<SpellingGame />} />
                 <Route path="/playground" element={<PlayGround />} />
                 <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Box>
+                </Routes>
+              </Box>
+            </div>
+            <Footer />
           </div>
-
-          <Footer />
-        </div>
-      </Router>
+        </Router>
+      </AppProvider>
     </ApolloProvider>
   );
 }
