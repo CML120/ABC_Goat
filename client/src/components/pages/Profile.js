@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME } from "../../utils/queries";
 import { DELETE_USER } from "../../utils/mutations";
 import "./Profile.css";
 
-import { Container, Flex, VStack, Box, Center, Button } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Text,
+  VStack,
+  Box,
+  Center,
+  Button,
+} from "@chakra-ui/react";
 
 const Profile = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const [deleteUserById, { error }] = useMutation(DELETE_USER);
+  const [deleteUser, setDeleteUser] = useState("");
+  const [hideuser, setHideUser] = useState(false);
   // Retrieve user info from localStorage
   const userInfo = data?.me || {};
 
@@ -25,6 +35,7 @@ const Profile = () => {
         variables: { userId },
       });
 
+      setDeleteUser("User has been deleted!");
       // deleteUserById({ id: userId });
     } catch (error) {
       console.error(error);
@@ -53,7 +64,9 @@ const Profile = () => {
             <h1 id="profile-header">Profile</h1>
             {userInfo ? (
               <div>
-                <p id="profile-p">Welcome {userInfo?.username}!</p>
+                {!deleteUser && (
+                  <p id="profile-p">Welcome {userInfo?.username}!</p>
+                )}
                 {/* <p id='profile-p'>Email: {userInfo?.email}</p> */}
                 <p id="profile-p">Level: {userInfo?.level}</p>
                 <Button
@@ -68,6 +81,7 @@ const Profile = () => {
                 >
                   Delete User
                 </Button>
+                {deleteUser && <Text fontSize="16px">{deleteUser}</Text>}
               </div>
             ) : (
               <p>No user info available</p>
