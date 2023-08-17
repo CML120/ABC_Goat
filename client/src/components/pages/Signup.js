@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { CREATE_USER } from '../../utils/mutations';
-import './Signup.css';
-import Auth from '../../utils/auth';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { CREATE_USER } from "../../utils/mutations";
+import "./Signup.css";
+import Auth from "../../utils/auth";
 import {
   Input,
   Button,
@@ -13,13 +13,13 @@ import {
   Center,
   VStack,
   Spacer,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
   const [createUser, { error, data }] = useMutation(CREATE_USER);
 
@@ -45,28 +45,30 @@ const Signup = () => {
   };
 
   return (
-    <main id="signupForm" className="" style={{ marginTop: '-150px' }}>
+    <main id="signupForm" className="" style={{ marginTop: "-150px" }}>
       <Flex align="center" justify="center" height="100vh">
         <Container>
-          <VStack spacing='1vh'>
+          <VStack spacing="1vh">
             <Box>
               <h1 className="">Sign Up</h1>
             </Box>
           </VStack>
-          <VStack spacing='1vh'>
+          <VStack spacing="1vh">
             <Box>
               {data ? (
                 <Box>
-                  Success! You may now head{' '}
+                  Success! You may now head{" "}
                   <Link to="/">back to the homepage.</Link>
                 </Box>
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <Box mb="4">
-                    <label htmlFor="Input1" className="form-label">Username: </label>
+                    <label htmlFor="Input1" className="form-label">
+                      Username:{" "}
+                    </label>
                     <Input
-                      size="lg"
-                      fontSize="xl" // Adjust font size here
+                      size="md"
+                      fontSize="md" // Adjust font size here
                       className=""
                       placeholder="Your username"
                       name="username"
@@ -76,10 +78,12 @@ const Signup = () => {
                     />
                   </Box>
                   <Box mb="4">
-                    <label htmlFor="Input2" className="form-label">Email: </label>
+                    <label htmlFor="Input2" className="form-label">
+                      Email:{" "}
+                    </label>
                     <Input
-                      size="lg"
-                      fontSize="xl" // Adjust font size here
+                      size="md"
+                      fontSize="md" // Adjust font size here
                       className=""
                       placeholder="Your email"
                       name="email"
@@ -89,10 +93,12 @@ const Signup = () => {
                     />
                   </Box>
                   <Box mb="4">
-                    <label htmlFor="Input3" className="form-label">Password: </label>
+                    <label htmlFor="Input3" className="form-label">
+                      Password:{" "}
+                    </label>
                     <Input
-                      size="lg"
-                      fontSize="xl" // Adjust font size here
+                      size="md"
+                      fontSize="md" // Adjust font size here
                       className=""
                       placeholder="******"
                       name="password"
@@ -103,12 +109,12 @@ const Signup = () => {
                   </Box>
                   <Center>
                     <Button
-                      size='lg'
-                      borderRadius='lg'
-                      bg='black'
-                      color='white'
+                      size="md"
+                      borderRadius="md"
+                      bg="black"
+                      color="white"
                       className=""
-                      style={{ cursor: 'pointer' }}
+                      style={{ cursor: "pointer" }}
                       type="submit"
                     >
                       Submit
@@ -117,11 +123,7 @@ const Signup = () => {
                 </form>
               )}
 
-              {error && (
-                <div className="">
-                  {error.message}
-                </div>
-              )}
+              {error && <Box maxW="600px">{error.message}</Box>}
             </Box>
           </VStack>
         </Container>

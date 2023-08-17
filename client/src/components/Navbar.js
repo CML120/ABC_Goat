@@ -83,7 +83,7 @@ function Navbar() {
                   src={user.level >= 5 ? groatAvatar : goatAvatar}
                   alt="Avatar"
                   className="avatar-image"
-                  style={{ border: user.level > 5 ? '3px solid gold' : 'none' }} // Add this line
+                  style={{ border: user.level > 5 ? '3px solid gold' : 'none' }}
                 />
               )}
             </Link>

@@ -1,9 +1,10 @@
 #signupForm {
-    font-size: 2.2em;
-    font-weight: 500; 
+    font-size: 1.5rem;
+    font-weight: 200;
     color: whitesmoke;
-}
-
-.signup-input {
+  }
+  
+  .signup-input {
     color: black;
-}
+  }
+  
