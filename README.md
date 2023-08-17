@@ -7,7 +7,6 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Contact](#contact)
 
 
   ## Project Description
