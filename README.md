@@ -24,7 +24,7 @@ Deployed link: https://abc-goat-ddaec4f82441.herokuapp.com/
   [annyang](https://www.npmjs.com/package/annyang)  
   [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)  
   [React](https://react.dev/learn) and various React libraries such as react-awesome-reveal, react-router-dom, react-scripts  
-  [Apollo Client](https://www.npmjs.com/package/@apollo/client)
+  [Apollo Client](https://www.npmjs.com/package/@apollo/client)  
   [GraphQL](https://graphql.org/)  
   [jwt-decode](https://www.npmjs.com/package/jwt-decode)  
   [axios](https://www.npmjs.com/package/axios)  
