@@ -45,7 +45,7 @@ Begin your journey on the Play Ground page, and then explore the Practice Letter
 To access the last two pages, sign up for an account. Your spelling game's different levels will be displayed on the Profile page.   
 If needed, you can delete your user account any time on the profile page.
 
-![Deployed Link:](https://abc-goat-ddaec4f82441.herokuapp.com/)
+[Deployed Link:](https://abc-goat-ddaec4f82441.herokuapp.com/) https://abc-goat-ddaec4f82441.herokuapp.com/
 
 
 
