@@ -64,9 +64,9 @@ function Navbar() {
             </Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <span className="nav-item" onClick={handleLogout}>
+            <a className="nav-item" onClick={handleLogout}>
               Logout
-            </span>
+            </a>
           </BreadcrumbItem>
         </Breadcrumb>
 
