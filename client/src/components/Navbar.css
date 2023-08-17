@@ -1,0 +1,60 @@
+/* Navbar.css */
+*{
+  font-size: 102%;
+}
+#navbar {
+  background: linear-gradient(.40turn, rgb(247, 245, 245), 10%, #1fc3fa);
+  color: white;
+  padding: 0.25%;
+  position: sticky;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 0 10px;
+}
+
+#navbar-menu {
+  text-decoration: none;
+  color: white;
+}
+.nav-descriptive-image {
+  width: 10rem;
+  align-self: center;
+}
+
+.avatar-container {
+  position: fixed;
+  top: 1%; 
+  right: 2.5%; 
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container.logged-in {
+  display: block;
+}
+
+.avatar-container.logged-in img {
+  width: 100%;
+  height: 100%; 
+}
+
+@media (max-width: 1068px) {
+  *{
+    font-size: 97%;
+  }
+}
+
+@media (max-width: 768px) {
+  *{
+    font-size: 96%;
+  }
+}

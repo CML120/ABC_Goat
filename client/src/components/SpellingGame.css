@@ -1,0 +1,233 @@
+/* Define your main styles within a container */
+.spelling-game {
+  text-align: center;
+  margin: 50px auto;
+  max-width: auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.spelling-game h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.spelling-game h2 {
+  color: white;
+}
+
+.spelling-game p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.spelling-game button {
+  background: radial-gradient(circle, rgb(197, 189, 115) 0%, rgba(187, 96, 33, 0.954) 100%);
+  border-radius: 8px;
+  color: #000000;
+  border: none;
+  padding: 8px 13px;
+  font-size: 20px;
+  margin: 8px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.spelling-game button:hover {
+  background-color: #0056b3;
+}
+
+.spelling-game .spoken-word-container {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.message-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.message {
+  color: red !important;
+}
+
+
+.level{
+  color: gold !important;
+  font-size: 105% !important;
+}
+
+.img-container {
+  position: fixed;
+  top: 25%;
+  right: 5%;
+}
+
+.responsive-image {
+  position: fixed;
+  top: 30%;
+  right: 9%;
+  width: 19%;
+  height: 29%;
+  border-radius: 30px;
+  object-fit: fill;
+  border: 5px solid rgb(14, 53, 30);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 830px) {
+  .responsive-image {
+    position: fixed;
+    top: 15%;
+    right: 5%;
+    width: 20%;
+    height: 25%;
+    border-radius: 30px;
+    object-fit: fill;
+    border: 5px solid rgb(14, 53, 30);
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .spelling-game {
+    margin: 30px auto; /* Adjust margin for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .spelling-game h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+
+  .spelling-game p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    margin-bottom: 5px; /* Adjust margin for smaller screens */
+  }
+
+  .spelling-game button {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .spelling-game .spoken-word-container {
+    margin: 10px 0; /* Adjust margin for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .message-container {
+    margin-top: 5px; /* Adjust margin for smaller screens */
+  }
+
+  .img-container {
+    top: 15%; /* Adjust top position for smaller screens */
+    right: 3%; /* Adjust right position for smaller screens */
+  }
+
+  .responsive-image {
+    width: 20%;
+    /* Adjust width for smaller screens */
+    height: 25%;
+    /* Adjust height for smaller screens */
+    top: 20%;
+    /* Adjust top position for smaller screens */
+    right: 4%;
+    /* Adjust right position for smaller screens */
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Adjust this value for spacing between buttons */
+    margin-top: 50px;
+    /* Add margin to separate from other content */
+  }
+}
+
+@media (max-width: 550px) {
+  .spelling-game {
+    margin: 30px auto;
+    /* Adjust margin for smaller screens */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .spelling-game h1 {
+    font-size: 20px;
+    /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+    /* Adjust margin for smaller screens */
+  }
+
+  .spelling-game p {
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
+    margin-bottom: 5px;
+    /* Adjust margin for smaller screens */
+  }
+
+  .spelling-game button {
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
+    padding: 6px 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .spelling-game .spoken-word-container {
+    margin: 10px 0;
+    /* Adjust margin for smaller screens */
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
+  }
+
+
+  .message-container {
+    margin-top: 5px;
+    /* Adjust margin for smaller screens */
+  }
+
+  .img-container {
+    top: 15%;
+    /* Adjust top position for smaller screens */
+    right: 3%;
+    /* Adjust right position for smaller screens */
+  }
+
+  .responsive-image {
+    width: 22%;
+    /* Adjust width for smaller screens */
+    height: 20%;
+    /* Adjust height for smaller screens */
+    top: 30%;
+    /* Adjust top position for smaller screens */
+    right: 4%;
+    /* Adjust right position for smaller screens */
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+}

@@ -1,0 +1,61 @@
+.word-guess-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20%;
+    font-size: 24px;
+    max-width: 800px;
+    max-height: 100% !important;
+  }
+  
+  
+  .guess-word {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .timer {
+    font-size: 18px;
+  }
+  
+  .start-button-wgg {
+    display: flex;
+    background: radial-gradient(circle, rgba(240, 230, 140, 1) 0%, rgba(187, 96, 33, 0.954) 100%);
+    border-radius: 8px;
+    color: #13293d;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 16px;
+    text-align: center;
+    transition: background-color 0.15s linear;
+    margin-top: 20px;
+  }
+  
+  .start-button:hover {
+    background: radial-gradient(circle, rgba(240, 230, 140, 0.9) 0%, rgba(187, 96, 33, 0.85) 100%);
+  }
+  
+  .win-loss-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .win-loss {
+    font-size: 16px;
+  }
+  
+  .word-gif{
+    max-width: 65%;
+    height: auto;
+    border-radius: 5%;
+  }
+
+  .instructions {
+    font-size: 18px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }

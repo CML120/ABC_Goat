@@ -1,0 +1,57 @@
+.playground-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    color: white;
+  }
+  
+  .button-container-PG {
+    margin-top: 20px;
+  }
+  
+  .start-stop-button {
+    background: radial-gradient(circle, rgba(240, 230, 140, 1) 0%, rgba(187, 96, 33, 0.954) 100%);
+    border-radius: 8px;
+    color: #13293d;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+    transition: background-color 0.15s linear;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 11.3%;
+  }
+  
+  .spoken-word-PG {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .gif-container-PG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-height: 55%;
+}
+  
+  .gif-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 5%;
+  }
+  
+  .instruction-text {
+    font-size: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
